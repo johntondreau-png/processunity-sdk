@@ -44,10 +44,10 @@ const files = await client.files.getFiles(objectId);
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
-| `listExportable()` | GET `/api/dataexchange/ExportableReports/0` | List local export reports |
-| `listRemoteExportable()` | GET `/api/dataexchange/RemoteExportableReports/0` | List remote export reports |
-| `listImportable()` | GET `/api/dataexchange/ImportableTemplates/0` | List local import templates |
-| `listRemoteImportable()` | GET `/api/dataexchange/RemoteImportableTemplates/0` | List remote import templates |
+| `listExportable()` | GET `/api/dataexchange/ExportableReports` | List local export reports |
+| `listRemoteExportable()` | GET `/api/dataexchange/RemoteExportableReports` | List remote export reports |
+| `listImportable()` | GET `/api/dataexchange/ImportableTemplates` | List local import templates |
+| `listRemoteImportable()` | GET `/api/dataexchange/RemoteImportableTemplates` | List remote import templates |
 
 ### `client.imports`
 

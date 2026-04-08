@@ -12,35 +12,35 @@ export class ReportsResource {
 
   /**
    * List exportable reports (local).
-   * GET /api/dataexchange/ExportableReports/0
+   * GET /api/dataexchange/ExportableReports
    */
   async listExportable(): Promise<Report[]> {
-    return this.http.get<Report[]>("/api/dataexchange/ExportableReports/0");
+    return this.http.get<Report[]>("/api/dataexchange/ExportableReports");
   }
 
   /**
    * List exportable reports (remote/federated).
-   * GET /api/dataexchange/RemoteExportableReports/0
+   * GET /api/dataexchange/RemoteExportableReports
    */
   async listRemoteExportable(): Promise<Report[]> {
-    return this.http.get<Report[]>("/api/dataexchange/RemoteExportableReports/0");
+    return this.http.get<Report[]>("/api/dataexchange/RemoteExportableReports");
   }
 
   /**
    * List importable templates (local).
-   * GET /api/dataexchange/ImportableTemplates/0
+   * GET /api/dataexchange/ImportableTemplates
    */
   async listImportable(): Promise<ImportTemplate[]> {
-    return this.http.get<ImportTemplate[]>("/api/dataexchange/ImportableTemplates/0");
+    return this.http.get<ImportTemplate[]>("/api/dataexchange/ImportableTemplates");
   }
 
   /**
    * List importable templates (remote/federated).
-   * GET /api/dataexchange/RemoteImportableTemplates/0
+   * GET /api/dataexchange/RemoteImportableTemplates
    */
   async listRemoteImportable(): Promise<ImportTemplate[]> {
     return this.http.get<ImportTemplate[]>(
-      "/api/dataexchange/RemoteImportableTemplates/0",
+      "/api/dataexchange/RemoteImportableTemplates",
     );
   }
 }
