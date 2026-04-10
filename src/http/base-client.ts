@@ -88,6 +88,11 @@ export class BaseClient {
       return json as T;
     }
 
+    // Some endpoints return null (e.g. GetReportColumns on empty reports)
+    if (json === null || json === undefined) {
+      return null as T;
+    }
+
     // /api/ endpoints return { Message, HasError, Data }
     const envelope = json as PuApiResponse<T>;
     if (envelope.HasError !== undefined) {
